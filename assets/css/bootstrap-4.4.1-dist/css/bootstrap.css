@@ -4330,6 +4330,7 @@ input[type="button"].btn-block {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  margin:5px;
 }
 
 .navbar .container,
@@ -4349,7 +4350,7 @@ input[type="button"].btn-block {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -10220,6 +10221,22 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+.btn-search1
+{
+  color: white;
+  background-color: rgb(253,125,12);
+  border-color: rgb(253,125,12);
+}
+.bg-text
+{
+  color: red! important;
+  font-family:candara;
+  font-weight: bold;
+}
+.menu
+{
+  background-color:red;
 }
 
 
