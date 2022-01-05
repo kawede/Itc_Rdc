@@ -18,9 +18,25 @@ else if ($url[0]== 'contact')
 {
 	require 'mains/contact.php';
 }
+else if ($url[0]== 'project')
+{
+	require 'mains/project.php'; 
+}
+else if($url[0]=='sign_training')
+{
+	require 'mains/sign_training.php';
+}
+else if($url[0]=='galeries')
+{
+	require 'mains/galeries.php';
+}
 else if ($url[0]== 'accueil')
 {
-	require 'mains/home.php';
+	require 'mains/home.php'; 
+}
+else if ($url[0]== 'take_partTraining')
+{
+	require 'mains/take_partTraining.php';
 }
 else if ($url[0]== 'inscription')
 {

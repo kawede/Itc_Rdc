@@ -1,4 +1,8 @@
-<?php require_once('./admin/model/database.php');?>
+<?php
+ require_once('./admin/includes/_base.php');
+ require_once('./admin/includes/_functions.php');
+
+?>
 <!doctype html>
 <html lang="en">
    <head>
@@ -12,8 +16,8 @@
     <meta property="og:title" content="" />
     <meta property="og:title" content="https://www.congofirstchoice.com" />
     <meta property="og:type" content="firstchoice" />
-    <meta property="og:url" content="https://www.congofirstchoice.com" />
-    <meta property="og:image" content="assets/images/logof.png" />
+    <meta property="og:url" content="https://www.itc-Rdc.com" />
+    <meta property="og:image" content="assets/images/logoitcpng.png" />
      <script src="assets/demo/demos.js"></script>
      <link href="assets/demo/demos.css" rel="stylesheet"/>
      <script src="assets/lib/typed.js" type="text/javascript"></script>
@@ -30,10 +34,10 @@
    <!--  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome/css/font-awesome.min.css"> -->
     <link href="assets/css/google-font.css" rel="stylesheet">
 
-     <link rel="shortcut icon" href="assets/images/logof.png">
+     <link rel="shortcut icon" href="assets/images/logoitc.jpg">
 
 
-    <title>First-Choice</title>
+    <title>ITC-RDC</title>
   </head>
   <!--  <script type="text/javascript">        
         if (window.location.protocol != "https:") {
@@ -50,9 +54,6 @@
       ga('send', 'pageview');
       </script> -->
   <style type="text/css">
-      /* ==========================================
-    FOR DEMO PURPOSE
-  ========================================== */
 
 
 .text-small {
@@ -98,38 +99,63 @@ footer {
     .md{
       display: none;
     }
+    .imgCar
+    {
+      width: 200px;
+    }
   }
   body, html {
     height: 100%;
   }
+
+  .scrolling-active
+  {
+    background-color: red;
+  }
+
+   .scrolling-active .navbar a
+  {
+    background-color: blue;
+  }
+  .scrolling-active .navbar 
+  {
+    height: 6.6rem;
+  }
   </style>
-  <body >
+  <body  style="background-image:url('assets/images/us.png'">
      <!-- <body style="background-image:url('assets/images/ground1.png');"> -->
   
-      <div class="col-md-12 col-sm-12 md" style="background-color: rgb(2,4,104); font-weight:bold;padding:5px;">
+      <div class="col-md-12 col-sm-12 md" style="background-color: rgb(10,74,145);padding:5px;">
         <div class="container">
           <div class="row" style="">
-          <div class="col-md-3">
-            <a href="https://www.facebook.com/First-Choice-100760638956198/" style="font-family:candara;font-weight:bold;color:white;"><i class="fa fa-facebook"></i> facebook </a>
-          </div>
-          <div class="col-md-3">
-            <a href="mailto:
-info@congofirstchoice.com"style="font-family:candara;font-weight:bold;color:white;"><i class="fa fa-envelope"></i> info@congofirstchoice.com </a>
-          </div>
-          <div class="col-md-3">
-           <a href="https://twitter.com/ezechiel_kawede"style="font-family:candara;font-weight:bold;color:white;"><i class="fa fa-twitter"></i> Twitter</a>
+          <div class="col-md-8">
+            <a href="mailto:info@itcrd.org" style="font-family:candara;color:white;"><i class="fa fa-envelope"></i>  ongitcrdc@gmail.com </a>
+            
+            <a href="#"style="font-family:candara;color:white;" class="ml-4"><i class="fa fa-phone"></i> +243991571461 </a>
+          
+           <a href="https://twitter.com/ezechiel_kawede"  class="ml-4" style="font-family:candara;color:white;"><i class="fa fa-clock-o"></i> Lundi - Samedi 8H - 16H | Samedi 8H - 12H</a>
           </div> 
-           <div class="col-md-3">
-           <a href="#"style="font-family:candara;font-weight:bold;color:white;"><i class="fa fa-phone"></i> +243977743843</a>
+           <div class="col-md-3" style="background-color: rgb(200,0,0);">
+              
+                <a href="sign_training" class="scrollto ml-4" style="color:white;">
+                <span class="fa fa-file"></span>
+                <span>Demande de formation</span>
+              </a>
           </div>
         </div>
         </div>
       </div>
+      <!-- <div class="col-md-12 col-sm-12 md" style="background-color:white;padding:5px;">
+        <div class="container">
+          <marquee direction="left"><span style="font-size:50px; color:black; font-weight:bold;">INTERNATIONAL TRAINING CENTER</span></marquee>
+        </div>
+      </div> -->
 	 
+  <marquee direction="left"><span style="font-size:50px; color: rgb(2,4,104); font-weight:bold;">INTERNATIONAL TRAINING CENTER</span></marquee>
+  	<nav class="navbar navbar-expand-lg " style="background-color: white; background-image:url('assets/images/berb.jfif')"  >
 
-  	<nav class="navbar navbar-expand-lg " style="background-color: white;"  >
 	  <a class="navbar-brand" href="accueil">
-	  	<img src="assets/images/logof.png" style="width:250px; ">
+	  	<img src="assets/images/logoitc.jpg" style="width:250px; ">
 	  </a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon" style=" border:1px solid black; border-radius:5px;background-color: rgb(2,4,104);" ></span>
@@ -137,31 +163,46 @@ info@congofirstchoice.com"style="font-family:candara;font-weight:bold;color:whit
 	  </button>
 
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding:10px;">
+
 	    <ul class="navbar-nav ml-auto" >
+        
 	      <li class="nav-item active">
-  	        <a class="nav-link" href="accueil" style="font-family:candara;color: rgb(2,4,104);font-weight: bold;font-size:18px;">Accueil <span class="sr-only"></span></a>
+  	        <a class="nav-link" href="accueil" style="font-family:candara;color: rgb(2,4,104);font-size:20px;font-weight:bold;">Accueil <span class="sr-only"></span></a>
   	      </li>
           <li class="nav-item active">
-            <a class="nav-link" href="about" style="font-family:candara;color: rgb(2,4,104);font-weight: bold;font-size:18px;">A propos <span class="sr-only"></span></a>
+            <a class="nav-link" href="formation" style="font-family:candara;color: rgb(2,4,104);font-size:20px; font-weight:bold; ">Nos programmes <span class="sr-only"></span></a>
+          </li>
+            <li class="nav-item active">
+            <a class="nav-link" href="about"style="font-family:candara;color: rgb(2,4,104);font-size:20px;font-weight:bold;">A propos de nous <span class="sr-only"></span></a>
+          </li>
+             <li class="nav-item active">
+            <a class="nav-link" href="contact"style="font-family:candara;color: rgb(2,4,104);font-size:20px;font-weight:bold;">Contact <span class="sr-only"></span></a>
           </li>
 	         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="font-family:candara;color: rgb(2,4,104);font-weight: bold;font-size:18px;">
-              Formations
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="font-family:candara;color: rgb(2,4,104);font-size:20px;font-weight:bold;">
+              Infos
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="formation" style="background-color:rgb(2,4,104);color:white;font-weight: bold;" >Techniques des ventes</a>
-              <a class="dropdown-item" href="formation" style="font-weight: bold;color:rgb(2,4,104); ">Anglais Intermediares</a>
+              <a class="dropdown-item" href="galeries" style="color:rgb(2,4,104);font-weight:bold;" >Galerie</a>
+              <a class="dropdown-item" href="project" style="font-weight: bold;color:rgb(2,4,104); ">Nos projets</a>
             </div>
           </li>
       
-             <li class="nav-item active">
-            <a class="nav-link" href="contact"style="font-family:candara;color: rgb(2,4,104);font-weight: bold;font-size:18px;">Contact <span class="sr-only"></span></a>
-          </li>
 
 	    </ul>
 	    <form class="form-inline my-2 my-lg-0">
-         <button class="btn btn-search1 my-2 my-sm-0 mr-1" type="submit"style="color: white;"><i class="fa fa-user " ></i><a href="inscription"> S'inscription</a></button>    
+         <a href="sign_training"><button type="button" class="btn btn-light" style="border:1px solid black;">Demande de formation</button> </a> 
         <!-- <button class="btn btn-search1 my-2 my-sm-0 " type="submit"><i class="fa fa-globe "></i><a href="emploi"> Offres d'emploi </a></button> -->
 	    </form>
+
 	  </div>
+
 	</nav>
+  <script type="text/javascript">
+    window.addEventListener('scroll', function(){
+      let navbar = document.querySelector(".navbar");
+      let windowPosition = window.scrollY > 0;
+      navbar.classList.toggle('scrolling-active', windowPosition);
+
+    })
+  </script>

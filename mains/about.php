@@ -3,166 +3,108 @@
   
 </style>
 <script>
-  document.title=" First-Choice | A propos de nous"
+  document.title=" ITC-Rdc | A propos de nous"
 </script>
-  <div class="container">
+<hr>
+ <div class="container">
+  <div class="row">
     <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-4 mb-2" style="height: 370px; width:170px; " >
-          <div class="sliderCaroussel1" style="width: 70px; height: 70px;">
-              <div id="imgcar1">
-                <img src="images_CarousselSalle/6.jpg" class="" style="width:350px; float: left;">
-              </div>
-            </div>
-        </div>
-        
-        <div class="col-md-8 mt-2 card "  >
-      
-          <p class="mt-4 " style="text-align: justify;  font-size: 18px; font-family: candara;"><font style="font-weight: bold;">Congo First Choice </font>est une industrie oeuvrant dans l’ingénierie humaine qui produit les meilleurs commerciaux pour aider les entreprises  à mieux commercialiser leurs produits et services. <font style="font-weight: bold;">Congo First Choice</font> s’occupe de <font style="font-weight: bold;color: rgb(2,4,104);"><em>la formation, le recrutement, l’étude du marché et la commercialisation de différents produits et services fourni par ses partenaires.</em></font></font><br><font style="font-weight: bold;">Congo First Choice</font> offre une possibilité aux commerciaux de se perfectionner en vente en bénéficiant de l’expérience et l’expertise de ses formateurs qui ont fait leur preuve en tant vendeurs brillaants </p>.<r>
-            <a href="emploi" class="btn btn-primary text-center btn-block" style="background-color: rgb(2,4,104);">Recrutement des nouveaux commerciaux</a>
+      <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn  btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:red;font-size: 16px; font-weight: bold;">
+         ONG ITC (International Training Center) 
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body" style="text-align: justify;">
+         Organisation Non Gouvernementale. L’ensemble de ses personnels se mobilise au quotidien pour couvrir les besoins fondamentaux des victimes civiles mises en péril, marginalisées ou exclues par les effets de catastrophes naturelles, de guerres et de situations d’effondrement économique. L’objectif est d’aider les populations déracinées dans l’urgence, tout en leur permettant de regagner rapidement autonomie et dignité. L’ONG mène environ 5 projets par an, dans les domaines de la sécurité alimentaire, Formation Professionnelle, la santé, la nutrition, l’eau et l’assainissement. Dans les ONG internationaux ce parmi les 5 postes clés mais de plus en plus dans le cas de la RDC, certains décideurs (chefs d’entreprises), commencent à prendre conscience des multiples enjeux de la logistique pour l’évolution de l’entreprise dans son environnement
       </div>
     </div>
   </div>
- 
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-12  mt-2 text-center"  style="background-color: rgb(2,4,104);color: white;">
-          <h2 class="mt-4">La première place de marché internationale pour l'apprentissage et la formation aux techniques de ventes</h2><br>
-               <p><i class="fa fa-users"></i> En mettant en relation des participants du monde entier avec les meilleurs formateurs, Udemy aide les personnes à atteindre leurs objectifs et à réaliser leurs rêves.</p>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"style="color:red;font-size: 16px; font-weight: bold;">
+         Importance de nos formations 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+         Action :
+        Mener un certain nombre d’actions suite au stage de formation, de sorte à utiliser et transmettre les résultats de la formation avec votre environnement : 
+        – Informer votre organisation de la formation et de ses résultats.
+        – Utiliser votre confiance et votre motivation renforcée pour présenter de nouvelles idées à votre organisation, service, groupe ou projet.
+        – Utiliser certaines des méthodes expérimentées durant la formation avec votre propre groupe de jeunes.
+        – Si un rapport a été produit, le mettre à la disposition de votre organisation et l’utiliser comme base pour la tenue d’ateliers.
+        Acteurs :
+        Permettre à d’autres personnes d’utiliser les résultats du stage de formation :
+        – Organiser un atelier pour d’autres responsables de jeunesse dans votre environnement, en utilisant une simulation mise en œuvre lors de la formation 
+        – afin d’étudier avec vos collègues comment l’exploiter dans votre propre travail.
+        – Inviter des responsables ou des animateurs de jeunesse de votre quartier à une réunion, afin de les informer au sujet des programmes de financement découverts à l’occasion de la formation. Discuter de la façon dont vous pourriez diffuser et utiliser ces informations.
+        – Former certains de vos collègues ou des jeunes de votre groupe à certaines compétences acquises lors de la formation (ex : comment monter et conduire un projet international de jeunesse). 
+
       </div>
     </div>
   </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"style="color:red;font-size: 16px; font-weight: bold;">
+          Projet
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body" style="text-align: justify;">
+        <span style="color:black;font-size:18px; font-weight: bold;">Transmettre l’expérience de la formation en montant un projet mis en œuvre suite à la formation (avec ou sans votre participation) :</span> <br></br>
+        <span style="color:black;font-size:18px; font-weight: bold;">Créer un cadre permanent de coaching des jeunes diplômés ; universitaires et autres cadres sur le entreprenariat et l’ emploi et aussi dans beaucoup d’autres domaines ;</span></br></br>
+       <span style="color:black;font-size:18px; font-weight: bold;">Former les jeunes en entreprenariat ;</span></br></br>
+        <span style="color:black;font-size:18px; font-weight: bold;">Sensibiliser les jeunes pour éveiller leur conscience sur les enjeux de l’emploi et stimuler en eux l’esprit d’entreprenariat ;</span></br></br>
 
-    <div class="container">
+        <span style="color:black;font-size:18px; font-weight: bold;">Sensibiliser les jeunes pour éveiller leur conscience sur les enjeux de l’emploi et stimuler en eux l’esprit d’entreprenariat ;</span></br></br>
 
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-12 mt-4">
-           <h2 class="text-center">Nos Services</h2>
-           <p style="color:rgb(253,125,12);font-weight: bold;"><em>Nous formons les meilleurs commerciaux pour le bien de vos entreprises</em></p>
-          <div class="row">
 
-            <div class="col-md-3 mb-2">
-              <div class="col-md-12">
-                <div class="row card bg-light">
-                  <div class="col-md-12 card-body text-center">
-                    <i class="fa fa-info-circle" aria-hidden="true" style="font-size: 30px;color:rgb(253,125,12);"></i>
-                      <h6 style="font-weight: bold;color: rgb(2,4,104);">UNIQUE</h6>
-                    <div class="col-md-12 text-center mt-2">
-                      <h6 style="color:rgb(253,125,12);">Nous sommes la meilleure industrie qui produit les meilleurs commerciaux en RDC</h6>
-                      <br> <br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 mb-2">
-              <div class="col-md-12">
-                <div class="row card bg-light">
-                  <div class="col-md-12 card-body text-center">
-                    <i class="fa fa-asterisk" aria-hidden="true" style="font-size: 30px;color:rgb(253,125,12);"></i>
-                      <h6 style="font-weight: bold;color: rgb(2,4,104);">FOCUS SUR LE MARCHE</h6>
-                    <div class="col-md-12 text-center mt-2">
-                      <h6 style="color:rgb(253,125,12);">Révolutionner la fonction commerciale des entreprises congolaises.</h6>
-                      <br>
-                      <br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 mb-2">
-              <div class="col-md-12">
-                <div class="row card bg-light">
-                  <div class="col-md-12 card-body text-center">
-                    <i class="fa fa-asterisk" aria-hidden="true" style="font-size: 30px;color:rgb(253,125,12);"></i>
-                      <h6 style="font-weight: bold;color: rgb(2,4,104);">PERFORMANCE</h6>
-                    <div class="col-md-12 text-center mt-2">
-                      <h6 style="color:rgb(253,125,12);">Les formateurs sont des professionnels experimentés ayant fait leur preuve dans leur carrière de vendeur</h6>
+        <span style="color:black;font-size:18px; font-weight: bold;">Développer seule ou en collaboration avec les autres associations et/ou organiser les activités économiques de proximité au profit des jeunes vivant dans des milieux défavorisées (quartiers périphériques des villes des villages, des fermes) ;</span></br></br>
+       <span style="color:black;font-size:18px; font-weight: bold;">Vulgariser des techniques de création d’activités économiques ;</span></br></br>
 
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-             <div class="col-md-3 mb-2">
-              <div class="col-md-12">
-                <div class="row card bg-light">
-                  <div class="col-md-12 card-body text-center">
-                    <i class="fa fa-bullhorn"  style="font-size: 30px;color:rgb(253,125,12);"></i>
-                      <h6 style="font-weight: bold;color: rgb(2,4,104);">ATTRACTIF</h6>
-                    <div class="col-md-12 text-center mt-2">
-                      <h6 style="color:rgb(253,125,12);">Toutes les entreprises veulent accroître leur CA d’où elles  demandent des meilleurs commerciaux</h6>
+       <span style="color:black;font-size:18px; font-weight: bold;">Lutte contre l’insertion des jeunes dans les conflits, la pauvreté, le chômage et la délinquance juvénile </span></br></br>
 
-                      <br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>  
-        </div> 
+       <span style="color:black;font-size:18px; font-weight: bold;">Stimuler les jeunes à des activités agro-pastorales pour leur autonomisation et les former sur les techniques d’élaboration et gestion démocratique des projets à caractère communautaire et recherche des financements ;</span></br></br>
+
+        <span style="color:black;font-size:18px; font-weight: bold;"> Gestion des conflits et protection de l’environnement par les jeunes ;</span></br></br>
+
+
+        <span style="color:black;font-size:18px; font-weight: bold;">Permettre aux jeunes de se réunir autour des autorités locales et acteurs des secteurs d’entreprenariat  afin de discuter directement  de la question d’emploi et financement des projets des jeunes,</span></br></br>
       </div>
-    </div> 
+    </div>
   </div>
+   <!-- <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #4
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        kawede
+      </div>
+    </div>
+  </div> -->
+</div>
+    </div>
+  </div>
+   
  </div>
+ 
 
-  <div class="container mt-2">
-    <h1>Team</h1>
-    <div class="col-md-12" >
-    <div class="row">
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <img src="assets/images/lucien.jpg" class="img-thumbnail">
-          </div>
-          <div class="card-footer">
-            <h4 class="text-left">Bernard MALABA</h4>
-            <span class="text-left"><a href="mailto:lucienazmayawa@gmail.com">bernardmalaba@firstchoice.com</a></span>
-            <p class="text-left">Co founder & CEO</p>
-s
-            <a href="" class="btn btn-primary btn-block" data-toggle="modal" data-target="" style="background-color:rgb(2,4,104);">Description</a>
-          
-          </div>
-        </div>
-      </div>
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <img src="assets/images/lucien.jpg" class="img-thumbnail">
-          </div>
-          <div class="card-footer">
-            <h4 class="text-left">Lucien Azmayawa</h4>
-            <span class="text-left"><a href="mailto:lucienazmayawa@gmail.com">lucien@azmayawa@congofirstchoice.com</a></span>
-            <p class="text-left">Co founder & CEO</p>
-
-            <a href="" class="btn btn-primary btn-block" data-toggle="modal" data-target="#staticBackdrop" style="background-color:rgb(2,4,104);">Description</a>
-          
-          </div>
-        </div>
-      </div>
-       <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <img src="assets/images/ccc2.JPG" class="img-thumbnail">
-          </div>
-          <div class="card-footer">
-            <h4 class="text-left">Charles PATIENT LUBULA</h4>
-            <!-- <span class="text-left"><a href="mailto:lucienazmayawa@gmail.com">charles@firstchoice.com</a></span>
-            <p class="text-left">Coach & Formateur</p> -->
-
-            <a href="" class="btn btn-primary btn-block" data-toggle="modal" data-target="" style="background-color:rgb(2,4,104);">Description</a>
-          
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  </div>
- <br>
-  
+  <br>
 
 
  

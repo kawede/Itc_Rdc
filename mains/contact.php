@@ -1,12 +1,127 @@
 <?php include ('header.php'); ?>
 
    <script>
-  document.title=" First-Choice | Nous contact"
+  document.title=" ITC-Rdc | Nous contact"
 </script>
    <script type="text/javascript">
      
    </script>
+  <br><br>
    <div class="container">
+     <div class="col-md-12 shadow" style="background-color:rgb(233,235,236); ; border-radius:5px;">
+      <div class="row">
+            <section id="contact" class="contact">
+        <div class="container">
+                <?php
+              if (isset($_POST['btninscrit'])) {
+                # code...
+                extract($_POST);
+                if (!empty($nom_complet) && !empty($email) && !empty($sujet) && !empty($message)) {
+                  # code...
+
+                    $ps = $db->prepare("INSERT INTO contact(nom_complet,email,sujet,message) VALUES(:nom_complet,:email,:sujet, :message) ");
+                    $statement = $ps->execute(array(
+                      ':nom_complet'   =>  $nom_complet,
+                      ':email'    =>  $email,
+                      ':sujet'    =>  $sujet,
+                      ':message'   =>  $message
+
+                      ));
+
+                    if (!empty($statement)) {
+                      # code...
+                       echo '<b class=" text-center alert alert-success"> Message envoyé avec succes </b>';
+                    
+                    }
+                    else{
+                      echo("oups!!!!");
+                    }
+                  }
+                }
+                else{
+                  // echo("Tous les champs sont requis");
+                }
+
+              ?>
+            <hr>
+            <div class="section-title">
+                <h2 data-aos="fade-up" style="text-align:center">Contact</h2>
+                <p data-aos="fade-up">
+                Vous pouvez nous contacter directement dans cette rubrique pour nous transmettre vos pr&eacute;occupations,
+                 questions, propositions ou tout autre commentaire et vous aurez un feedback de notre part. Merci!
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-xl-3 col-lg-4 mt-4 shadow" data-aos="fade-up" >
+                    <div class="info-box">
+                        <i class="fa fa-map-marker"></i>
+                        <h4>Our Address</h4>
+                        <p>
+                             <span style="font-weight: bold;">Goma:</span> Q. Katindo, Av La Frontiere N°136 Ref:Un jour Nouveau <br> <span style="font-weight: bold;">Kinshasa:</span> Paroisse Notre Dame de Fatima, 1353, Av.Tombalbaye Gombé 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 mt-4 shadow" data-aos="fade-up">
+                    <div class="info-box">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <h4>Email Us</h4>
+                        <p>ongitcrdc@gmail.com <br>&nbsp;</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 mt-4 shadow" data-aos="fade-up" >
+                    <div class="info-box">
+                        <i class="fa fa-phone"></i>
+                        <h4>Appelez-nous</h4>
+                        <p>(+243) 991571461<br>(+243) 810258135 </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
+         
+                <div class="col-xl-9 col-lg-12 mt-4 py-3">
+                                 
+                    <form id="contact-form" method="POST">
+            
+                        <div class="form-row mx-3">
+                            <div class="col-md-6 form-group">
+                                <!-- <label for="nom"></label> -->
+                                <input type="text" name="nom_complet" class="form-control"  style="background-color:white;font-family:candara; color:black;background-color:white;"  placeholder="Votre nom complet"/>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control" name="email" style="background-color:white;font-family:candara; color:black;background-color:white;"  placeholder="Votre email"/>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" name="sujet"  style="background-color:white;font-family:candara; color:black;background-color:white;" placeholder="Sujet" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-lg-12 form-group">
+                                <textarea class="form-control" name="message"  style="background-color:white;font-family:candara; color:black;background-color:white;" rows="5" placeholder="Message"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-lg-12 mx-3 text-center text-danger mb-2">
+                                <span ouput-text='ouput'></span>
+                            </div>
+                            <div class="col-lg-12 form-group">
+                                <button class="btn bg-prmy w-100 btn-subcontact"  name="btninscrit" type="submit"style="background-color:rgb(200,0,0); color:white; font-family: candara">
+                                    <span>Envoyer le message</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+      </div>
+     </div>
+   </div>
+    
      <div class="col-md-12">
        <div class="row">
          <div class="col-md-12">
@@ -45,90 +160,5 @@
          </div>
        </div>
      </div>
-   </div>
-   <div class="container">
-     <div class="col-md-12">
-       <div class="row">
-         <div class="col-md-8 " >
-            <h3 class="mt-2 text-center">Nous Contact</h3>
-            <p class="text-center">Veuillez nous laisser un message electronique ou contactez-nous à travers nos informations de contact.</p>
-              <div class="text-center">
-                 <?php
-                 //exit(var_dump(isset($_POST['btninscrit'])));
-                if (isset($_POST['btninscrit'])) {
-                 $nom = $_POST['nom'];
-                 $email = $_POST['email'];
-                 $phone = $_POST['phone'];
-                 $message = $_POST['message'];
-                 if ($nom && $email && $phone && $message) {
-                 $myqwery=$db->prepare("INSERT INTO contact (nom,email,phone,message) VALUES(:nom,:email,:phone,:message)");
-                 $myqwery->execute(array(
-                  'nom'=> $nom,
-                  'email'=> $email,
-                  'phone'=> $phone,
-                  'message'=> $message
-                
-                 ));
-                 
-                 if ($myqwery){
-                 echo '<div class="text-danger text-center alert alert-success"><i class="fa fa-check" aria-hidden="true"></i>  Merci de nous avoir contacté </div>';
-                 }  
-                }
-                 else{
-                  echo '<b class="text-danger text-center alert alert-danger"><i class="fa fa-check" aria-hidden="true"></i>  une case est vide </b>';
-                  }
-                 } 
-             
-               ?> 
-              </div>
-            <form method="POST" action="">
-                <div class="col-md-12 form-group">
-                  <input type="text" name="nom" class="form-control bg-white" placeholder="Entrer votre nome" required="">
-                </div>
-                <div class="col-md-12 form-group" >
-                   <input type="email" class="form-control bg-white" placeholder="votre email" name="email" required="">
-                </div>
-                <div class="col-md-12 form-group">
-                   <input type="phone" class="form-control bg-white" placeholder="Numero" name="phone" required="">
-                </div>
-                <div class="col-md-12 form-group">
-                  <textarea class="form-control bg-white" cols="30" placeholder="Message *" name="message" required=""></textarea>
-                </div>
-              <div class="col-md-12 form-group">
-                <button type="submit" class="btn btn-primary btn-block" name="btninscrit" style="background-color: rgb(2,4,104); font-family: candara; border:1px solid rgb(2,4,104);">
-                  <i class="fa fa-send mr-1"></i> Envoyer
-                </button>
-              </div>
-          </form>
-         </div>
-         <div class="col-md-4 mt-4">
-              <div class="row">
-                  <div class="col-md-12">
-                    <h3>Nos Contacts</h3>
-                     <hr>
-                  </div>
 
-                  <div class="col-md-12">
-                    <i class="fa fa-clock-o mr-1" style="color: rgb(2,4,104); font-size:19px; "></i>  Ouvert 24h/24h -Lundi au samedi
-                     <hr>
-                  </div>
-
-                  <div class="col-md-12">
-                    <i class="fa fa-phone mr-1" style="color: rgb(2,4,104); font-size:19px; "></i>  <a href="tel:+243817883541"> +243817883541 </a>
-                     <hr>
-                  </div>
-                  <div class="col-md-12">
-                    <i class="fa fa-envelope mr-1" style="color: rgb(2,4,104); font-size:19px; "></i>  <a href="mailto:info@congofirstchoice.com"> info@congofirstchoice.com</a>
-                     <hr>
-                  </div>
-
-                  <div class="col-md-12">
-                    <i class="fa fa-map-marker mr-1" style="color: rgb(2,4,104); font-size:19px; "></i>  Situé sur le Boulevard Kanyamuhanga, la rue Vanny Bishweka, numero 20, au-dessus de SMICO, 2eme étage, Commune de Goma
-                     <hr>
-                  </div>
-                </div>
-         </div>
-       </div>
-     </div>
-   </div>
   <?php include ('footer.php'); ?>

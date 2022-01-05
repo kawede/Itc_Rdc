@@ -1,68 +1,122 @@
-<!doctype html>
+<?php 
+require_once('includes/_headersec.php');
+$USER=new Users($db);
+?>
+<?php   
+    $output = '';
+    if(isset($_POST['_email']) && isset($_POST['_motpasse'])){
+        $state = $USER->onSignin(trim($_POST['_email']), ($_POST['_motpasse']), '_admin');
+        if(is_array($state)){
+            $status = (int) $state['status'];
+            switch ($status) {
+                case 200:
+                    $output = "user granted";
+                    ?>
+                    <script>
+                        window.location.replace('home.php');
+                        // alert(200)
+                    </script>
+                    <?php
+                    // 
+                    // header("location : httts://google.com");
+                    // 
+                    break;
+                case 500: 
+                    $output = "serveur error";
+                    break;
+                case 405:
+                    $output = "unknow user";
+                    break;
+                default:
+                    $output = "serveur error";
+                    break;
+            }
+        }
+    }
+?>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-       <script src="assets/demo/demos.js"></script>
-    <link href="assets/demo/demos.css" rel="stylesheet"/>
-     <script src="assets/lib/typed.js" type="text/javascript"></script>
-    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-   
-    <link rel="stylesheet" href="assets/css/bootstrap-4.4.1-dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome/css/font-awesome.min.css">
- 
-    <!-- hors connexion -->
+  <title>Login</title>
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <!-- fontawason -->
-   <!--  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome/css/font-awesome.min.css"> -->
-    <link href="assets/css/google-font.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-     <link rel="shortcut icon" href="assets/images/logo.png">
+</head>
+<body class="bg-gradient">
 
-    <title>Login</title>
-  </head>
- 
+  <div class="container">
 
-   <div class="container mt-4" >
-     <div class="col-md-12">
-       <div class="row">
-        <div class="col-md-3"></div>
-         <div class="col-md-6 p-5 card " style=";margin-top:100px;">
-         
-            <form  class="mt-2" method="POST" autocomplete="off" action="" id="my_form">
-                <h3 class="text-center"><i class="fa fa-user"></i> Se connecter</h3>
-          <div class="col-md-12 form-group message"></div>
-                <div class="col-md-12 form-group">
-                  <input type="text" name="name1" id="name"class="form-control bg-white" placeholder="nom " >
-                  <span class="text-danger" id="error_name"></span>
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-6 col-lg-6 col-md-6">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              
+              <div class="col-lg-12" >
+                <div class="p-5">
+                  <div class="text-center">
+                    <i class="fa fa-user" style="font-size:30px;color:black;"></i>
+                  </div>
+                  <br>
+                   <?php
+                        if (isset($output)) {
+                            echo "<div style='color: red; font-weight: bold' class='pt-2 col-lg-12 text-center'> $output  </div>";
+                        }
+                    ?>
+                  <form action="" method="POST">
+                    
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="_email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Saisir une adresse email" required=""  style="color:black;font-family:candara;">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" name="_motpasse" id="exampleInputPassword" placeholder="Saisir le mot de passe" required=""  style="color:black;font-family:candara;" >
+                    </div>
+                    <div class="form-group">
+                      
+                    </div>
+                    <button class="btn btn- btn-user btn-block" name="btnlogin" style="background-color:rgb(46,57,61); color:white;">
+                      Se connecter                 
+                    </button>
+                             
+                    <hr>
+
+                  </form>
                 </div>
-              <div class="col-md-12 form-group" >
-                 <input type="password" class="form-control bg-white" placeholder="mot de passe *" name="pwd" id="pwd">
-                 <span class="text-danger" id="error_pwd"></span>
               </div>
-              
-              
-              <div class="col-md-12 form-group">
-                <button type="submit" class="btn btn-primary btn-block" style="background-color: rgb(2,4,104); font-family: candara; border:1px solid rgb(2,4,104);">
-                  <i class="fa fa-sign-in mr-1"></i> Se Connecter
-                </button>
-              </div>
-          </form>
-         </div>
-         <div class="col-md-3"></div>
-       </div>
-     </div>
-   </div>
+            </div>
+          </div>
+        </div>
 
- 
-</div>
-   <script src="assets/js/Event.js"></script>
-  
-    <script src="assets/css/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-  </body>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
 </html>
